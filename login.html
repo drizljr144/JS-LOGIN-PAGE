@@ -5,28 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+  <link rel="stylesheet" href="assets/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/brands.min.css">
+  <link rel="stylesheet" href="assets/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/brands.css">
 </head>
 <body>
+  <div class="icon">
+    <i class="fa-brands fa-facebook"></i>
+  </div>
   <div class="container">
-    <div class="heading">
-      <h2>Login Here</h2>
-    </div>
     <div class="fields">
-      <label for="Fname">First name</label>
-      <input type="text" placeholder="Your First Name" id="Fname" name="fname"><br><br>
 
-      <label for="Lname">Last name</label>
-      <input type="text" placeholder="Your Last Name" id="Lname" name="lname"><br><br>
+      <input type="text" placeholder="Mobile number or email" id="Username" name="Mobile number or email"><br>
+  
+      <input type="password" placeholder="Password" id="Password" name="password"><br>
 
-      <label for="Password">Password</label>
-      <input type="password" placeholder="Your Password" id="Password" name="password"><br><br>
-
-      <label for="ConfirmPassword">Confirm Password</label>
-      <input type="password" placeholder="Confirm your Password" id="ConfirmPassword" name="confirmPassword"><br><br>
     </div>
     <div class="submit">
       <button id="SubmitButton" onclick="RedirectFacebook()">Submit</button>
-      
+    </div>
+    <div class="forgot">
+      <a href="forgot.html"><button id="ForgotButton">Forgot password?</button></a>
     </div>
   </div>
 

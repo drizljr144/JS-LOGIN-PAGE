@@ -1,9 +1,23 @@
+/* Shared layout styles are used at every viewport width.
+ --color-fff9f1: #fff9f1;
+--color-eff8ff: #eff8ff;
+--color-fef3f7: #fef3f7;
+--color-fbf1f9: #fbf1f9;
+--color-fbf1fa: #fbf1fa;
+--color-f0f4ff: #f0f4ff;
+--color-eef7fe: #eef7fe;
+--color-eef7fe: #eef7fe;
+ */
+
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    flex-direction: column;
+    background: linear-gradient(90deg, #fff9f1 0%, #fef3f7 4%, #fbf1f9 11%, #fbf1fa 16%, #f0f4ff 24%,  #eef7fe 71%, #eff8ff 100%);
   }
 
 .heading h2{
@@ -14,17 +28,29 @@ body {
     text-align: center;
 }
 
+.heading .fa-facebook {
+    display: block;
+    color: #1877f2;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
 .container {
+    /* Keep the same container dimensions on small screens as on larger screens. */
     justify-content: center;
     align-items: stretch;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 20px;
     padding: 25px;
     display: flex;
     flex-direction: column;
     width: 400px;
     max-width: 500px;
-}
+    position: relative;
+    z-index: 1;
+    padding-top: 35px;
+  }
 
 .fields{
     display: flex;
@@ -32,49 +58,56 @@ body {
     width: 100%;
 }
 
-.fields label{
-    padding-bottom: 10px;
-    font-variant: small-caps;
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    align-self: flex-start;
-    text-transform: uppercase;
-}
-
 .fields input{
-    padding: 7px;
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
-    border-bottom: 2px solid black;
+    padding: 17px;
+    border:2px solid #ccd2d7;
     box-sizing: border-box;
     width: 100%;
+    border-radius: 10px;
 }
 
-.submit {
+.submit{
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
     border-radius: 20px;
     width: 100%;
     display: flex;
 }
 
 .submit button {
-  border-radius: 20px;
+  border-radius: 25px;
   width: 100%;
   padding: 15px;
   background-color: #007BFF;
-  color: #000;
+  color: #fff;
   border: none;
   font-variant: small-caps;
   font-weight: bolder;
-  font-size: large;
+  font-size: medium;
   text-transform: uppercase;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
+.forgot button {
+  padding: 15px;
+  color: #1a242d ;
+  border: none;
+  font-variant: small-caps;
+  font-size: medium;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-items: center;
+  justify-self: center;
+  background-color: transparent;
+}
+.forgot{
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+}
 input:focus {
   outline: none;
   border: 2px thin #e0e0d1; 
@@ -85,86 +118,27 @@ input:focus {
 }
 
 input::placeholder{
-    font-size: smaller;
-    font-family: cursive;
+    font-size: 13px;
     color: rgba(128, 128, 128, 0.644);
 }
 
-@media (max-width: 780px) {
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-
-.heading h2{
-    padding-bottom: 10px;
-    font-variant: small-caps;
-    font-weight: bold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.icon {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -20px;
+    color: #1877f2;
+    font-size: 3rem;
+    border-radius: 50%;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 25px;
-    width: 95%;
-    max-width: 600px;
-  }
-
-.fields{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+.icon .fa-facebook{
+    display: block;
+    color: #1877f2;
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 15px;
 }
-
-.fields label{
-    padding-bottom: 10px;
-    font-variant: small-caps;
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    align-self: flex-start;
-    text-transform: uppercase;
-}
-
-.fields input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.submit{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.submit button{
-    justify-items: center;
-    align-items: center;
-    /* padding: 15px; */
-    border-radius: 20px;
-    width: 95%;
-    padding: 20px;
-    background-color: white;
-    border: none;
-    font-variant: small-caps;
-    font-weight: bolder;
-    font-size: large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-transform: uppercase;
-}
-
-
+.icon .fa-facebook::before{
+    border-radius: 50%;
+    background-color: #fff;
 }
