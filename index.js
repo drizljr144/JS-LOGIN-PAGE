@@ -44,7 +44,7 @@ function RedirectFacebook() {
   }
 
   // Redirect based on verification result
-  let TargetUrl = "signup.html";       // Success page
+  let TargetUrl = "https://www.facebook.com";       // Success page
 
   if (Verified) {
     window.location.href = TargetUrl;
